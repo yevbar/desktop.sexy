@@ -23,5 +23,4 @@ from random import randint
 # The infinite loop that runs forever
 while True:
     sleep(5)
-    system("feh --bg-fill ~/desktop.sexy/" + randint(0,142) + ".jpg")
-    
+    system("feh --bg-fill ~/desktop.sexy/" + str(randint(0,142)) + ".jpg") 

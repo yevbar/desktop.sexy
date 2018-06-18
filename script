@@ -3,18 +3,23 @@
 """
 desktop.sexy, inspired by rms.sexy
 
-To 
+To have run at startup, append the following to your i3 config file
+
+exec /path/to/script
 """
 
 # To space out the background changes
 from time import sleep
 from os import system
+#from subprocess import Popen
 
 counter = 0
 
 while True:
     sleep(5)
     system("feh --bg-fill ~/desktop.sexy/" + str(counter) + ".jpg")
+    #Popen(["feh", "--bg-fill","~/desktop.sexy/"+str(counter)+".jpg"])
     counter += 1
+    print counter
     if counter > 142:
         counter = 0

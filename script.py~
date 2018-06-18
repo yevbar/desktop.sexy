@@ -1,0 +1,18 @@
+#!/usr/bin/python
+
+"""
+desktop.sexy, inspired by rms.sexy
+
+To 
+"""
+
+# To space out the background changes
+from time import sleep
+from os import system
+
+counter = 0
+
+while True:
+    global counter
+    sleep(5)
+    system("feh --bg-fill /path/to/

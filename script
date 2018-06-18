@@ -6,20 +6,22 @@ desktop.sexy, inspired by rms.sexy
 To have run at startup, append the following to your i3 config file
 
 exec /path/to/script
+
+If that does not work, make sure your path is correct
+If it is correct, make sure it is runnable either by using chmod or chown
 """
 
 # To space out the background changes
 from time import sleep
+
+# To execute the command that changes the background
 from os import system
-#from subprocess import Popen
 
-counter = 0
+# To generate a random image each time
+from random import randint
 
+# The infinite loop that runs forever
 while True:
     sleep(5)
-    system("feh --bg-fill ~/desktop.sexy/" + str(counter) + ".jpg")
-    #Popen(["feh", "--bg-fill","~/desktop.sexy/"+str(counter)+".jpg"])
-    counter += 1
-    print counter
-    if counter > 142:
-        counter = 0
+    system("feh --bg-fill ~/desktop.sexy/" + randint(0,142) + ".jpg")
+    
